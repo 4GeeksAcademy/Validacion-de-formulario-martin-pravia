@@ -33,6 +33,9 @@ window.onload = function() {
     ];
     for (const input of inputs) {
       input.style.backgroundColor = "";
+
+      let campoValido = true;
+      const error = [];
     }
   });
 };

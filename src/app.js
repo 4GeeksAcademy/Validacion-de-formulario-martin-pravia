@@ -15,6 +15,24 @@ window.onload = function() {
     const lastName = document.getElementById("lastName");
     const city = document.getElementById("city");
     const state = document.getElementById("state");
-    const pCode = document.getElementById("pCode");
+    const postalCode = document.getElementById("pCode");
+
+    const alertMessage = document.querySelector(".alert");
+    alertMessage.style.display = "none";
+    alertMessage.style.textContent = "";
+
+    const inputs = [
+      cardNumber,
+      CVC,
+      amount,
+      firstName,
+      lastName,
+      city,
+      state,
+      postalCode
+    ];
+    for (const input of inputs) {
+      input.style.backgroundColor = "";
+    }
   });
 };

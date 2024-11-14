@@ -45,13 +45,13 @@ window.onload = function() {
 
       if (
         (cVC.value.length !== 3 && cVC.value.length !== 4) ||
-        isNaN(CVC.value)
+        isNaN(cVC.value)
       ) {
         error.push("CVC must be 3 or 4 digits.");
-        CVC.style.backgroundColor = "red";
+        cVC.style.backgroundColor = "red";
         campoValido = false;
       }
-      if (amount.value < 0 || isNan(amount.value)) {
+      if (isNaN(amount.value) || amount.value <= 0) {
         error.push("El importe debe de ser mayor a $0");
         amount.style.backgroundColor = "red";
         campoValido = false;

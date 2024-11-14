@@ -56,6 +56,24 @@ window.onload = function() {
         amount.style.backgroundColor = "red";
         campoValido = false;
       }
+      if (!firstName.value) {
+        error.push("Complete su nmombre por favor");
+        firstName.style.backgroundColor = "red";
+        campoValido = false;
+      }
+      if (!lastName.value) {
+        error.push("Complete su apellido por favor");
+        lastName.style.backgroundColor = "red";
+        campoValido = false;
+      }
+      if (!city.value) {
+        error.push("Complete su ciudad por favor");
+        city.style.backgroundColor = "red";
+        campoValido = false;
+      }
+      if (state.value === "Pick a state") {
+        error.push("Seleccione un estado por favor");
+      }
     }
   });
 };

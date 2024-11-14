@@ -23,7 +23,7 @@ window.onload = function() {
 
     const inputs = [
       cardNumber,
-      CVC,
+      cVC,
       amount,
       firstName,
       lastName,
@@ -40,6 +40,20 @@ window.onload = function() {
       if (cardNumber.value.length !== 16 || isNaN(cardNumber.value)) {
         error.push("La tarjeta debe de tener 16 digitos");
         cardNumber.style.backgroundColor = "red";
+        campoValido = false;
+      }
+
+      if (
+        (cVC.value.length !== 3 && cVC.value.length !== 4) ||
+        isNaN(CVC.value)
+      ) {
+        error.push("CVC must be 3 or 4 digits.");
+        CVC.style.backgroundColor = "red";
+        campoValido = false;
+      }
+      if (amount.value < 0 || isNan(amount.value)) {
+        error.push("El importe debe de ser mayor a $0");
+        amount.style.backgroundColor = "red";
         campoValido = false;
       }
     }

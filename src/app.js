@@ -36,6 +36,12 @@ window.onload = function() {
 
       let campoValido = true;
       const error = [];
+
+      if (cardNumber.value.length !== 16 || isNaN(cardNumber.value)) {
+        error.push("La tarjeta debe de tener 16 digitos");
+        cardNumber.style.backgroundColor = "red";
+        campoValido = false;
+      }
     }
   });
 };

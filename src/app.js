@@ -73,6 +73,13 @@ window.onload = function() {
       }
       if (state.value === "Pick a state") {
         error.push("Seleccione un estado por favor");
+        state.style.backgroundColor = "red";
+        campoValido = false;
+      }
+      if (postalCode.value.length !== 5 || isNaN(postalCode.value)) {
+        error.push("Su codigo postal debe de ser de 5 dígitos, verifiquelo.");
+        postalCode.style.backgroundColor = "red";
+        campoValido = false;
       }
     }
   });
